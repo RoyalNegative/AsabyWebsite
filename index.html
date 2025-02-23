@@ -1,46 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Welcome to Asaby Home Page, your go-to source for premium clothing.">
-    <meta name="keywords" content="Asaby, Home Page, Content, Amazing, Clothing, Asaby Brand">
-    <meta name="author" content="Asaby Team">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Welcome to Asaby Home Page, your go-to source for premium clothing."
+    />
+    <meta
+      name="keywords"
+      content="Asaby, Home Page, Content, Amazing, Clothing, Asaby Brand"
+    />
+    <meta name="author" content="Asaby Team" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Asaby</title>
-</head>
-<body>
-    <header class="w-full h-auto px-10 flex items-center justify-between header-container" >
-        <svg class="menu-icon icon" id="menu-icon" xmlns="http://www.w3.org/2000/svg" >
-            <use href="./images/symbol-defs.svg#icon-menu"></use>
+  </head>
+  <body>
+    <header
+      class="w-full h-auto px-10 flex items-center justify-between header-container"
+    >
+      <svg
+        class="menu-icon icon"
+        id="menu-icon"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <use href="./images/symbol-defs.svg#icon-menu"></use>
+      </svg>
+      <svg class="Asaby-icon" id="asaby-icon-b">
+        <use href="./images/symbol-defs.svg#icon-blacklogo"></use>
+      </svg>
+      <svg class="Asaby-icon hidden" id="asaby-icon-w">
+        <use href="./images/symbol-defs.svg#icon-whitelogo"></use>
+      </svg>
+      <div class="hidden md:flex gap-5">
+        <svg class="dark-icon icon" id="dark-icon">
+          <use href="./images/symbol-defs.svg#icon-moon"></use>
         </svg>
-        <svg class="Asaby-icon" id="asaby-icon-b" >
-            <use href="./images/symbol-defs.svg#icon-blacklogo"></use>
+        <svg class="light-icon icon hidden" id="light-icon">
+          <use href="./images/symbol-defs.svg#icon-sun"></use>
         </svg>
-        <svg class="Asaby-icon hidden" id="asaby-icon-w" >
-            <use href="./images/symbol-defs.svg#icon-whitelogo"></use>
-        </svg>
-        <div class="hidden md:flex gap-5 ">
-            <svg class="dark-icon icon" id="dark-icon">
-                <use href="./images/symbol-defs.svg#icon-moon"></use>
-            </svg>
-            <svg class="light-icon icon hidden" id="light-icon" >
-                <use href="./images/symbol-defs.svg#icon-sun"></use>
-            </svg>
-            <!-- <svg class="profile-icon icon" id="profile-icon" >
-                <use href="./images/symbol-defs.svg#icon-profile"></use>
-            </svg> -->
-        </div>
-
+       
+      </div>
     </header>
+    <main>
+      <section class="hero">
+        <div class="hero-text-container">
+            <h1 class="hero-text">Asaby ye hosgeldiniz!</h1>
+            <a> 
+                <button class="shopbtn button">Alisverise git!</button>
+            </a>    
+        </div>
+      </section>
+    </main>
 
-
-
-
+    <footer></footer>
+    <div class="menu-drawer flex items-center justify-center" id="menu">
+      <ul class="menu-items-container">
+        <a href="index.html">
+            <li class="menu-item-container">
+                <svg class="drawer-icon" id="home-icon">
+                    <use href="./images/symbol-defs.svg#icon-home"></use>
+                </svg>
+                <h2>Ana Sayfa</h2>
+            </li>
+        </a>
+        <a href="shop.html">
+            <li class="menu-item-container">
+                <svg class="drawer-icon" id="light-icon">
+                    <use href="./images/symbol-defs.svg#icon-shop"></use>
+                </svg>
+                <h2>Magaza</h2>
+            </li>
+        </a>
+        <a href="login.html">    
+            <li class="menu-item-container">
+                <svg class="drawer-icon" id="light-icon">
+                    <use href="./images/symbol-defs.svg#icon-profile"></use>
+                </svg>
+                <h2>Profil</h2>
+            </li>
+        </a>
+      </ul>
+      <div class="menu-drawer-footer">
+        <p>&copy; 2025 Asaby</p>
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
