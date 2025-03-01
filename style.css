@@ -169,7 +169,63 @@ button:hover{
     border-radius: 15px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-    
+    .header-container {
+    }
+
+    .menu-icon, .dark-icon, .light-icon {
+    }
+
+    .drawer-icon {
+    }
+
+    .Asaby-icon {
+    }
+
+    .icon {
+    }
+
+    .menu-drawer {
+        width: 500px;
+    }
+
+    .menu-items-container {
+    }
+
+    .menu-item-container {
+    }
+
+    .menu-drawer-footer {
+    }
+
+    .hero {
+    }
+
+    .hero-text-container {
+    }
+
+    .hero-text {
+    }
+
+    .shopbtn {
+    }
+
+    .login-title {
+    }
+
+    .login-container {
+    }
+
+    .login-form-container {
+    }
+
+    .login-form {
+    }
+
+    .login-form input {
+    }
+
+    .login-button {
+    }
 }
 
 @media (min-width: 1025px) {
