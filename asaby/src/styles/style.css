@@ -51,7 +51,7 @@ body{
     top: 0;
     left: 0;
     width: 0;
-    z-index: 999;
+    z-index: 500;
     transition: all 0.5s;
     background-color: var(--grey-background-color);
     border-radius: 0 20px 20px 0;
@@ -232,5 +232,108 @@ button:hover{
 }
 
 @media (min-width: 1025px) {
+    /* 3D model ve UI entegrasyonu için ek stiller */
+
+/* Canvas ayarları */
+.threejs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Düşük z-index değeri */
+  }
+  
+  /* Header'ı sayfanın en üstünde sabit tut */
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Canvas'ın üzerinde */
+    pointer-events: auto; /* Mouse eventlerini yakala */
+  }
+  
+  /* Header container için mevcut stillerinize ek */
+  
+  
+  /* Scroll içeriği */
+  .scroll-content {
+    position: relative;
+    z-index: 5; /* Canvas üzerinde ama header'ın altında */
+  }
+  
+  /* İçerik bölümleri */
+  .content-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* İçerik wrapper */
+  .content-wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-wrapper h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+  }
+  
+  .content-wrapper p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+  }
+  
+  /* Responsive ayarlar */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      padding: 30px;
+      margin: 0 20px;
+    }
     
+    .content-wrapper h2 {
+      font-size: 2rem;
+    }
+    
+    .content-wrapper p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Scroll animasyonları için */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hover efektleri */
+  .shopbtn {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+  
+  .shopbtn:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
 }
