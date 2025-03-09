@@ -3,11 +3,9 @@ const WhiteLogo = ({ color }) => {
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="32"
       viewBox="0 0 24 32"
       fill={color}
-      className="Asaby-icon hidden"
+      className="Asaby-icon-white"
       id="asaby-icon-w"
     >
       <path

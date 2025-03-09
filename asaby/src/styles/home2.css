@@ -35,6 +35,21 @@ body{
     color: blue;
 }
 
+.Asaby-icon-white{
+    width: 100px;
+    height: 100px;
+}
+
+.dark-icon{
+    width: 40px;
+    height: 40px;
+    fill: white;
+    transition: all 0.3s ease;
+}
+
+.dark-icon:hover{
+    fill: blue;
+}
 
 
 

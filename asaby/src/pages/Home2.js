@@ -1,12 +1,28 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles/home2.css';
+import { gsap } from "gsap";
+    
+import { Flip } from "gsap/Flip";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Observer } from "gsap/Observer";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { Draggable } from "gsap/Draggable";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { EaselPlugin } from "gsap/EaselPlugin";
+import { PixiPlugin } from "gsap/PixiPlugin";
+import { TextPlugin } from "gsap/TextPlugin";
+
+
+gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin);
 
 const Home2 = () => {
 
   return (
     <>
       <div className="home-container">
-        
+        <div className="section section1">
+            <h1>Crafted for Comfort,<br></br> Designed for You.</h1>
+        </div>
         <div className="scroll-content">
           <section className="content-section">
             <div className="content-wrapper">
