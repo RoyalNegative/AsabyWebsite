@@ -99,12 +99,13 @@ const Home = () => {
     <>
       <div id='container3D' ref={containerRef}></div>
       <div className="home-container">
-        <div className="fixed-header">
-          <Header />
-        </div>
+        
 
         <div className="scroll-content">
           <div className="spacer" style={{ height: '100vh' }}></div>
+          <button className="navigate-button" onClick={() => window.location.href = '/Home2'}>
+            Go to Home2
+          </button>
 
           <section className="content-section">
             <div className="content-wrapper">

@@ -25,15 +25,24 @@ const toggleDarkMode = () => {
 
   return (
     <header className="header-container">
-      <MenuIcon />
+      {/* <MenuIcon />
       <BlackLogo />
       <WhiteLogo /> 
 
       <div>
         <DarkMode onClick={toggleDarkMode} />
         <LightMode onClick={toggleDarkMode}/>
-      </div>
-    </header>
+      </div> */}
+      <nav className="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#profile">Profile</a></li>
+        </ul>
+      </nav>
+      </header>
+    
   );
 };
 
