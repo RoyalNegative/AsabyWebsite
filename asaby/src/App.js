@@ -8,13 +8,22 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import "./styles/style.css"
+import Logo from "../src/assets/images/logoblack.svg"
+import Preloader from "./components/Preloader";
 function App() {
   return (
+    <>
+    <Preloader 
+      type="logo" 
+      logo={Logo}
+      bgColor="#f5f7fa"
+      spinnerColor="#000000" 
+    />
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Home2" element={<Home2 />} />
+          <Route path="/" element={<Home2 />} />
+          <Route path="/Home2" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -22,6 +31,7 @@ function App() {
         </Routes>
       </Layout>
     </Router>
+    </>
   );
 }
 

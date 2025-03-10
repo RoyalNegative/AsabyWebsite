@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles/home2.css';
 import { gsap } from "gsap";
+import Spline from '@splinetool/react-spline';
+
+
     
 import { Flip } from "gsap/Flip";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,10 +19,48 @@ import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin);
 
 const Home2 = () => {
+  function onLoad(spline) {
+    try {
+        console.log("Spline object:", spline);
+
+        
+        setTimeout(() => {
+            if (spline._controls) {
+                console.log("OrbitControls found:", spline._controls);
+                spline._controls.isEnabled = false; 
+            } else {
+                console.log("OrbitControls not found yet, retrying...");
+            }
+        }, 500); 
+
+        const scene = spline._scene;
+        if (scene) {
+            console.log("Scene found");
+            console.log("Scene methods:", Object.keys(scene));
+        }
+
+        if (spline._camera) {
+            spline._camera.position.set(12.10 ,52.44, 358.49);
+            console.log("Camera updated.");
+        }
+
+    } catch (error) {
+        console.error("Error in onLoad:", error);
+    }
+}
+
+
 
   return (
+    
     <>
-      <div className="home-container">
+    <div className="spline-container">
+        {/* <Spline scene="https://prod.spline.design/BAQ3BUCRrndUtReh/scene.splinecode" onLoad={onLoad} /> */}
+        <Spline scene="https://prod.spline.design/L1srrYRpNXRFMvHY/scene.splinecode" onLoad={onLoad} />
+
+    
+    </div>
+    <div className="home-container">
         <div className="section section1">
             <h1>Crafted for Comfort,<br></br> Designed for You.</h1>
         </div>

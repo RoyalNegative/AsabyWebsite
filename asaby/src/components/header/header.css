@@ -88,5 +88,6 @@
     color: white;
     font-size: 50px;
     display: flex;
+    z-index: 10;
     
 }
